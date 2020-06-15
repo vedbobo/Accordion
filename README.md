@@ -13,33 +13,20 @@
 <body>
 <div class="banner" >
     <div class="mbanner">
-        <div data-ac=0>
-            <a href="" target="_blank">
-                <img class="banner1" src="images/1.jpg"/>
-            </a>
-            <span>大海</span>
-        </div>
-        <div data-ac=0>
-            <a href="" target="_blank">
-                <img class="banner1" src="images/2.jpg"/>
-            </a>
-            <span>冰山</span>
-        </div>
-        <div data-ac=1>
-            <a href="" target="_blank">
-                <img class="banner1" src="images/3.jpg"/>
-            </a>
-            <span>秋叶</span>
-        </div>
+    
     </div>
 </div>
 <script src="http://apps.bdimg.com/libs/jquery/1.9.1/jquery.min.js"></script>
 <script src="Accordionjs.js"></script>
 <script>
         $(".mbanner").Accordion({//banner幻灯
-            mod: "click",//mouse鼠标移上去模式，click点击切换模式
-            dtime: 2500,//延迟
-            auto: false//自动切换
+            mod: "mouse",//mouse鼠标移上去模式，click点击切换模式
+            dtime: 1000,//延迟
+            auto: false,//自动切换
+            img:[//自定义图片信息,url图片地址,title标题,href跳转地址
+                {url:'images/1.jpg',title:'大海',href:'http://www.baidu.com'},
+                {url:'images/2.jpg',title:'冰山',href:'http://www.qq.com'},
+                {url:'images/3.jpg',title:'秋叶'}]//无地址，不需跳转
         })
 </script>
 </body>
@@ -49,9 +36,13 @@
 #### 使用：
 ``` js
 $(".mbanner").Accordion({//banner幻灯
-      mod: "click",//mouse鼠标移上去模式，click点击切换模式
-      dtime: 2500,//延迟
-      auto: false//自动切换
-})
+            mod: "mouse",//mouse鼠标移上去模式，click点击切换模式
+            dtime: 1000,//延迟
+            auto: false,//自动切换
+            img:[//自定义图片信息,url图片地址,title标题,href跳转地址
+                {url:'images/1.jpg',title:'大海',href:'http://www.baidu.com'},
+                {url:'images/2.jpg',title:'冰山',href:'http://www.qq.com'},
+                {url:'images/3.jpg',title:'秋叶'}]//无地址，不需跳转
+        })
 ```
 
